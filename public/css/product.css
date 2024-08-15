@@ -1,0 +1,1012 @@
+:root{
+    --green:green;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+}
+.topnav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color:#666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+ 
+  
+
+  .topnav .icon {
+    display: none;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+ 
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color:#666;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+
+  .topnav a:hover, .dropdown:hover .dropbtn {
+
+    color: rgb(1, 156, 1);
+  }
+  
+ 
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+ 
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:rgb(16, 179, 10);
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153,.05);
+}
+
+.heading span{
+    color:var(--green);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background:#333;
+    color:#fff;
+    padding:.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background:linear-gradient(
+        #009719,
+        #363795);
+}
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background:#fff;
+    padding:2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+
+
+header .logo span{
+    color:var(--green);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color:#666;
+  
+}
+
+
+header .topnav a:hover{
+color: green;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+  height: 80vh;
+    background:url(../images/equipe.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center; 
+transition: 2s;
+    
+  
+}
+.home:hover{
+background: url(../images/10.jpeg) no-repeat;  
+background-position:center;
+height: 100vh;
+background-size: cover;}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color:rgb(5, 131, 11);
+    cursor: pointer;
+}
+.home .content h3 {
+    transition: 0.5s;
+}
+
+
+  .home .content h3 :hover{
+color:rgb(22, 143, 38);
+text-shadow: 0 0 10px rgb(255, 255, 255),0 0 20px #fff0 ,0 0 40px rgb(204, 203, 203),0 0 80px rgb(255, 255, 255),0 0 90px rgb(255, 255, 255);
+  }  
+        
+.home .content span{
+    font-size: 3.5rem;
+    color:var(--green);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:rgb(123, 122, 185);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+.about .content p:hover{
+    border-radius: 20px 20px 20px 20px;
+    border:1px lime;
+
+}
+.home .content p:hover{
+
+    border:1px solid white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: rgb(0, 0, 0) 1px 1px 1px 1px;
+    background-color: white;
+}
+
+
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+    flex:1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video{
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+.about .row .video-container video:hover{
+    content: '';
+    padding: 2px;
+    background: linear-gradient(-45deg,#00ff66,
+    #23074d,
+    #cc5333,#ff0099,#099fff);
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: 1;
+    animation: animate 40s linear infinite;
+
+}
+.about .row .video-container h3{
+    position: absolute;
+    top:50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background:#fff;
+    width:100%;
+    padding:1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+.about .row .img-container{
+    flex:1 1 40rem;
+    position: relative;
+}
+
+.about .row .img-container img{
+    width:100%;
+    border:1px solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+  
+}
+ 
+
+ .img-container img:hover{
+    content: '';
+    padding: 2px;
+    background: linear-gradient(-45deg,#00ff66,#00ffff,#ff00ff,#ff0099,#099fff);
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: 1;
+    animation: animate 40s linear infinite;
+
+
+}
+@keyframes animate{
+    0%{
+        background-position:0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.about .row .img-container h3{
+    position: absolute;
+    top:50%; transform: translate(150%);
+    font-size: 3rem;
+    background:#fff;
+    width:100%;
+    padding:1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+.about .row .content{
+    flex:1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#333;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;  
+  
+} 
+.section1:hover{
+
+    content: '';
+    padding: 2px;
+    background: linear-gradient(-45deg,#00ff66,
+    #420e8f,
+    #cc5333,#ff0099,#099fff);
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: 1;
+    animation: animate 10s linear infinite;
+}
+.section1 .section1-class h1{
+    color: #009708;}
+    .section1 .section1-class h2{
+        color: #2ec442;}
+.section1
+ li {
+    font-size: large;
+}
+.section1{
+    background:#eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.section1 .section1-class{
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.1);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    flex:1 1 25rem;
+}
+ .section1 .section1-class p{
+    font-size: 1.5rem;
+    color:rgb(0, 0, 0);
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+ }
+.section1 .section1-class li{
+    font-size: 1.5rem;
+    color:rgb(0, 0, 0);
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+.main-scroll-div{
+    width:90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  /*  border:2px solid red;*/
+}
+
+.cover{
+    background-color: transparent;
+    position: relative;
+    width:90%;
+    height: 50%;
+}
+.cover::before
+{
+position: absolute;
+content: "";
+left:0;
+top: 0;
+z-index:99;
+height: 100%;
+width: 150px;
+/*background-image: linear-gradient(90deg,black,transparent);*/
+}
+.cover::after
+{
+position: absolute;
+content: "";
+right:0;
+top: 0;
+z-index:99;
+height: 100%;
+width: 150px;
+/*background-image: linear-gradient(-90deg,black,transparent);*/
+}
+.scroll-images{
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+}
+.child{
+    min-width:600px;
+    height: 450px;
+    margin:1px 10px;
+    cursor: pointer;
+    border:1px solid white;
+overflow:hidden;
+}
+.scroll-images::-webkit-scrollbar{
+    -webkit-appearance:none;
+}
+.child-img{
+    width: 100%;
+    height: 100%;
+}
+.child-img{
+    margin:2px 11px;
+}
+.icon{
+    color: rgb(21, 197, 45);
+    font-size: 50px;
+    outline: none;
+    border:none;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.icon:hover{
+    color: rgb(30, 255, 0);
+}
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.review .box-container .box{
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:3rem 2rem;
+    position: relative;
+    border:.1rem solid rgba(0,0,0,.1);
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom:3rem; right:3rem;
+    font-size: 6rem;
+    color:#eee;
+}
+
+.review .box-container .box .stars i{
+    color:var(--green);
+    font-size: 2rem;
+}
+
+.review .box-container .box p{
+    color:#999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color:#333;
+}
+
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color:#999;
+}
+
+
+footer{
+
+    bottom: 0px;
+    width: 100%;
+    background: url(../images/africa.jpg) no-repeat;
+    background-size: cover;
+    position: center;
+   
+  }
+  .main-content{
+    display: flex;
+  }
+  .main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+  }
+  .box h2{
+    
+    color:white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+    color: white;
+    font-size: 12px;
+font-weight: bold;  }
+  .box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #fffbfb;
+  }
+  .box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #43f120;
+    top: -10px;
+  }
+  .left .content p{
+    text-align: justify;
+  }
+  .left .content .social{
+    margin: 20px 0 0 0;
+  }
+  .left .content .social a{
+    padding: 0 2px;
+  }
+  .left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #f7f5f5;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .left .content .social a span:hover{
+    background: #26ec57;
+  }
+  .center .content .fas{
+    font-size: 1.4375rem;
+    background: transparent;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .center .content .fas:hover{
+    background: #20f189;
+  }
+  .center .content .text{
+    font-size:12px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .center .content .phone{
+    margin: 15px 0;
+  }
+  .right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #fff;
+  }
+  .right form .msg{
+    margin-top: 10px;
+  }
+  .right form input, .right form textarea{
+    color: white;
+    width: 100%;
+    font-size:15px;
+    background: transparent;
+    padding-left: 10px;
+    border: 1px solid #10bb35;
+  }
+
+  .right form input{
+    height: 35px;
+  }
+  .right form input:hover{
+    background-color: rgb(53, 49, 49);
+
+  }
+  .right form .btn{
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid rgb(0, 255, 21);
+  }
+  .right form .btn button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background:transparent;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+  }
+  .right form .btn:hover{
+    background-color: #096d3e;
+    background-image: linear-gradient(315deg, #096d2a 0%, #37d5d6 74%);
+  }
+  .bottom center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: transparent;
+  }
+  .bottom center span{
+    color: #fffdfd;
+  }
+  .bottom center a{
+    color: #1ac561;
+    text-decoration: none;
+  }
+  .bottom center a:hover{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+    footer{
+      position: relative;
+      bottom: 0px;
+      background-size: cover;
+    }
+    .main-content{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .main-content .box{
+      margin: 5px 0;
+    }
+   
+  }
+  
+
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+    }
+ 
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+   
+
+}
+
+@media (max-width:768px){
+
+
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+  
+   
+    .section1 .section1-class img{
+   max-width: 500px;
+   max-height: 500px;
+    }
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+  
+}
+  footer{
+
+    bottom: 0px;
+    width: 100%;
+    background: url(../images/africa.jpg) no-repeat;
+    background-size: cover;
+    position: center;
+   
+  }
+  .main-content{
+    display: flex;
+  }
+  .main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+  }
+  .box h2{
+    
+    color:white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+    color: white;
+    font-size: 12px;
+font-weight: bold;  }
+  .box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #fffbfb;
+  }
+  .box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #007a11;
+    top: -10px;
+  }
+  .left .content p{
+    text-align: justify;
+  }
+  .left .content .social{
+    margin: 20px 0 0 0;
+  }
+  .left .content .social a{
+    padding: 0 2px;
+  }
+  .left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #f7f5f5;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .left .content .social a span:hover{
+    background: #4ee68d;
+  }
+  .center .content .fas{
+    font-size: 1.4375rem;
+    background: transparent;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .center .content .fas:hover{
+    background: #20f13c;
+  }
+  .center .content .text{
+    font-size:12px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .center .content .phone{
+    margin: 15px 0;
+  }
+  .right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #fff;
+  }
+  .right form .msg{
+    margin-top: 10px;
+  }
+  .right form input, .right form textarea{
+    color: white;
+    width: 100%;
+    font-size:15px;
+    background: transparent;
+    padding-left: 10px;
+    border: 1px solid #10bb10;
+  }
+
+  .right form input{
+    height: 35px;
+  }
+  .right form input:hover{
+    background-color: rgb(53, 49, 49);
+
+  }
+  .right form .btn{
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid rgb(8, 214, 19);
+  }
+  .right form .btn button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background:transparent;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+  }
+  .right form .btn:hover{
+    background-color: #096d2f;
+    background-image: linear-gradient(315deg, #096d27 0%, #37d5d6 74%);
+  }
+  .bottom center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: transparent;
+  }
+  .bottom center span{
+    color: #fffdfd;
+  }
+  .bottom center a{
+    color: #43e843;
+    text-decoration: none;
+  }
+  .bottom center a:hover{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+    footer{
+      position: relative;
+      bottom: 0px;
+    }
+    .main-content{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .main-content .box{
+      margin: 5px 0;
+    }
+  }
+  .slideshow-container {
+    padding-top: 15px;
+  max-width: 1000px;
+  position:relative;
+  margin: auto;
+}
+img{
+    width:800px;
+    height: 600px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text*/
+.text1 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.numbertext {
+  color: #b61abb;
+  font-size: 22px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
